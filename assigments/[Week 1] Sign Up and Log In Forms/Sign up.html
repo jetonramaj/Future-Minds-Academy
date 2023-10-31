@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Sign Up</h1><hr>
+    <form action="">
+        <fieldset>
+        <label for="name">First name:</label><br>
+        <input type="text" name="name" id="name" required ><br><br>
+        <label for="Iname">Last name:</label><br>
+        <input type="text" name="Iname" id="Iname" required><br><br>
+        <label for="email">email:</label><br>
+        <input type="email" name="email" id="email" placeholder="someone@example.com" required><br><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" name="pwd" id="pwd" pattern=".{8,}" required title="8 characters minimum" placeholder="8 characters minimum"><br><br>
+        <label for="pass"> Comfirm password:</label><br>
+        <input type="password" name="pass" id="pass" pattern=".{8,}"   required title="8 characters minimum" placeholder="8 characters minimum"><br><br>
+        <label for="number">Phone number:</label><br>
+        <input type="number" name="number" id="number " ><br><br>
+         <label for="City">Please enter  your City here</label>
+        <input list="City" name="City">
+        <datalist id="City">
+            <option value="Gjilan">
+          <option value="Prishtina">
+          <option value="Peje">
+          <option value="Prizeren">
+          <option value="Mitrovice">
+          <option value="Gjakove">
+        <option value="Ferizaj">
+        </datalist><br><br><br> 
+        <em>Gender:</em><br>
+        
+        <input type="radio" name="Gender" id="Male" value="Male">
+        <label for="Male">Male</label><br>
+        <input type="radio" name="Gender" id="Female" value="Female">
+        <label for="Female">Female</label><br><br>
+        <input type="checkbox" name="agree" id="agree" required>
+        <label for="agree">I agree to the Terms and Conditions</label><br><br>
+        <input type="submit" value="Sign Up">
+  <input type="reset" value="Reset">
+  <p> Already have an account? <a href="Log%20in.html"> <i style="color: black;">Log in</i></a></p>
+       
+    </fieldset>
+    </form>
+</body>
+</html>

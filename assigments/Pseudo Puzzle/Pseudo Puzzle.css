@@ -1,0 +1,11 @@
+p{
+    background-color: rgb(255, 153, 0);
+}
+p:hover{
+background-color: black;
+color: white;
+
+}
+p:hover:first-letter{
+    font-size: 75px;
+}

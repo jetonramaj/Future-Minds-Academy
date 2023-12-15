@@ -1,0 +1,123 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('./images/aaaa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+}
+.textaligncenter{
+    text-align: center;
+}
+hr {
+    width: 70%;
+}
+
+nav ul {
+    list-style: none;
+    display: inline;
+
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+nav a:hover {
+    background-color: rgb(0, 0, 93);
+}
+section{
+    margin: 44px 230px;
+}
+.who {
+    background-color: rgb(255, 255, 136);
+    border-radius: 22px;
+    padding-bottom: 10px;
+    border: 1px solid black transparent;
+    border-top: 4px solid black transparent;
+    border-top: 4px solid black transparent;
+}
+
+.who:hover {
+    background-color: rgb(229, 241, 105);
+    border: 1px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.school {
+    background-color: rgb(255, 86, 86);
+    border-radius: 22px;
+    padding: 8px 0px 13px 0px;
+    border: 2px solid black transparent;
+}
+
+.primary,
+.high {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.school:hover {
+    background-color: red;
+    border: 2px solid black;
+}
+.table{
+    background-color: rgb(143, 255, 103);
+    border-radius: 12px;   
+    padding: 10px;
+    border: 2px solid black transparent;
+}
+table{
+    border-collapse: collapse;
+}
+th {
+    background-color: #226b00;
+    color: white;
+  }
+  .table:hover{
+    background-color: #76cb4f;
+    border: 2px solid black;
+  }
+.projects{
+    background-color: rgb(218, 126, 167);
+    border-radius: 12px;   
+    padding: 20px;
+}
+.projects a{
+background-color: orangered;
+padding: 2px;
+border-radius: 7px;
+text-decoration: none;
+color: white;
+border: 3px solid black transparent;
+}
+.projects:hover{
+    background-color: rgb(136, 11, 67);
+    border: 3px solid black;
+}
+.projects a:hover{
+    background-color: rgb(100, 27, 0);
+    
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    margin: 44px 230px;
+}
+.link:visited{
+    color: rgb(255, 255, 0);
+}
+

@@ -1,0 +1,79 @@
+body {
+    padding: 20px 198px;
+    margin: 10;
+    background-image: url(./images/banner-website-water-drop-glass-windows-background_83196-797.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textaligncenter {
+    text-align: center;
+}
+
+.displayinline {
+    display: inline;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.bgblue {
+    background-color: blue;
+}
+
+.bgblue:hover {
+    background-color: rgb(2, 2, 97);
+
+}
+
+.bradius20 {
+    border-radius: 20px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.figure1 {
+    border: 5px red dotted;
+    background-color: yellow;
+
+}
+
+.figure1:hover {
+    border: 5px green solid;
+
+}
+
+.bgyellow {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+.bggreen {
+    background-color: green;
+    border-radius: 15px;
+}
+
+.bgyellow:hover,
+.bggreen:hover {
+    background-color: rgb(255, 0, 0);
+    cursor: copy;
+}
+
+.bgwhite {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.link:visited {
+    color: rgb(255, 255, 0);
+}

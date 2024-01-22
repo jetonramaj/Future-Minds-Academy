@@ -1,0 +1,19 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.dflex{
+    display: flex;
+}
+.bgblue{
+    background-color: blue;
+}
+a, li{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+header{
+    justify-content:space-evenly;
+}
+

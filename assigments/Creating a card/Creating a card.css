@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    gap: 8rem;
+}
+.dFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 400px;
+}
+
+.card {
+    border: 3px solid black;
+    width: 400px;
+
+}
+
+.Cfooter {
+    position: relative;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.txt-size {
+    font-size: larger;
+}
+
+.vertical-line {
+    border-left: 1px solid black;
+    height: 185px;
+    margin: 0 10px;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.pPosition {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

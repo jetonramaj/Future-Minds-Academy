@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+}
+img {
+    width: 100px;
+    height: 100px;
+    margin: 200px 700px;
+    filter: blur(5px);
+    transition: filter 0.1s, transform 2s;
+  }
+  
+  img:hover {
+    filter: none;
+    transform: rotate(720deg);
+    transition-delay: 1s;
+  }

@@ -1,0 +1,44 @@
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.dFlex {
+    display: flex;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+
+.itemsCenter {
+    align-items: center;
+}
+
+.gap1rem {
+    gap: 1rem;
+}
+.container{
+    height: 100vh;
+}
+
+main {
+    flex: 11;
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+/* Aside */
+aside {
+    flex: 2;
+    background: rgba(0, 0, 0, 0.512) url(./download-2114931675/images/images/sidebar-1.jpg);
+    
+    padding: 15px; 
+}

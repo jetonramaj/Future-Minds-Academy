@@ -1,0 +1,55 @@
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.img {
+    width: 100px;
+
+}
+
+.dFlex {
+    display: flex;
+}
+
+header {
+    background-color: green;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.gap2 {
+    gap: 2rem;
+
+}
+
+li {
+    background: #ff0000;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+/* Aside */
+aside {
+    background-color: aqua;
+    flex: 2;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+/* Main */
+main {
+    flex: 10;
+    width: 25%;
+}

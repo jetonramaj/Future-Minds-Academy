@@ -1,0 +1,16 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container {
+    background-color: rgb(169, 169, 169);
+    margin: 1em;
+    padding: 1em;
+    border:2px solid black ;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+

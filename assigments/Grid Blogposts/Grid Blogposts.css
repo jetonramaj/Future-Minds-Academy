@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+.div-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr ;
+    grid-template-rows: auto 1fr auto ;
+    height: 100vh;
+}
+img{
+ width: 50px;
+    border-radius: 50%;
+}
+
+.css{
+    background: green;
+}
+.html{
+    background-color: blue;
+}
+.javaSc{
+    background-color: red;
+}
+.login{
+    border: 2px  solid blue;
+    background-color: rgb(102, 151, 255);
+}
+span{
+    color: blue;
+}
+aside{
+    background-color: rgba(26, 8, 98, 0.743);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: right;
+    
+}
+main div {
+    display: grid;
+   grid-template-columns:  1fr 1fr  1fr  1fr ;
+}
+figure{
+    grid-column: 4/5;
+}
+
+

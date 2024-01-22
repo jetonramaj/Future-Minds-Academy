@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.dFlex{
+    display: flex;
+}
+.jContentvetween{
+    justify-content: space-between;
+}
+img{
+ width: 50px;
+    border-radius: 50%;
+}
+aside{
+    flex: 2;
+    background-color: rgb(102, 151, 255);
+    height: 100vh;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+main{
+    flex: 10;
+    margin: 90px;
+}
+.css{
+    background: green;
+}
+.html{
+    background-color: blue;
+}
+.javaSc{
+    background-color: red;
+}
+.login{
+    border: 2px  solid blue;
+    background-color: rgb(102, 151, 255);
+}
+span{
+    color: blue;
+}

@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+ul{
+    display: flex;
+    gap: 4rem;
+
+}
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+li{
+    background-color: blue;
+    border-radius: 20px;
+
+}
+.card{
+    background-color: blue;
+    width: 900px;
+}
+.dflex{
+ display: flex;
+}
+.button{
+    display: flex;
+  
+}
+button{
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+}
+.Addtocard{
+    width: 300px;
+}
+section{
+    display: flex;
+
+}

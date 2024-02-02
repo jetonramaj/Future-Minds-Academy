@@ -8,31 +8,293 @@
     <link rel="stylesheet" href="./CSS Final Project.css">
 </head>
 
-<body>
-    <div class="dFlex container">
-        <aside>
-<h1>CP COOL PAGE</h1>
-<hr>
-<div class="dFlex itemsCenter gap1rem" >
-    <figure><img src="./download-2114931675/images/images/avatar.jpg" alt="avatar" class="avatar"></figure>
-    <p>John Doe</p>
-</div>
-<hr>
-<nav >
-    <ul">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Compnent</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Maps</a></li>
-        <li><a href="#">Widgets</a></li>
-        <li><a href="#">Charts</a></li>
-        <li><a href="#">Calendar</a></li>
-    </ul>
-</nav>
-        </aside>
-        <main></main>
+<body class="dGrid">
+    <aside>
+        <h1>CP COOL PAGE</h1>
+        <hr>
+        <div class="dGrid gridtemplatecolumnsAuto1Auto gap2rem align-itemsCenter  icon paddingY10 border-radius7px ">
+            <figure><img src="./download-2114931675/images/images/avatar.jpg " alt="avatar" class="avatar "></figure>
+            <h1>John Doe</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+
+        <hr>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10  paddingY10 border-radius7px active paddingY10">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/asideDashboard.svg" alt="Dashboard">
+            </figure>
+            <h1>Dashboard</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px ">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/pages.svg" alt="Pages">
+            </figure>
+            <h1>Pages</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/components.svg" alt="components">
+            </figure>
+            <h1>Components</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/form.svg" alt="forms">
+            </figure>
+            <h1>Forms</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/table.svg" alt="Table">
+            </figure>
+            <h1>Table</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/map.svg" alt="Maps">
+            </figure>
+            <h1>Maps</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/widget.svg" alt="Widgets">
+            </figure>
+            <h1>Widgets</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/chart.svg" alt="charts">
+            </figure>
+            <h1>Charts</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+        <div
+            class="dGrid gridtemplatecolumnsAuto1Auto align-itemsCenter gap2rem margin10 icon paddingY10 border-radius7px">
+            <figure>
+                <img src="./icons-20240123T161436Z-001/icons/asides/calendar.svg" alt="Calendar">
+            </figure>
+            <h1>Calendar</h1>
+            <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
+        </div>
+    </aside>
+    <div class="dGrid right-side">
+        <header class="dFlex align-itemsCenter  ">
+            <div class="dFlex align-itemsCenter">
+                <figure>
+                    <img title="see-more" class="see-more paddingY10 cursorPointer"
+                        src="./icons-20240123T161436Z-001/icons/header/more.svg" alt="more">
+                </figure>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="dFlex align-itemsCenter rightHeader margin10 gap2rem">
+                <form class=" dFlex align-itemsCenter">
+                    <input type="search" id="search" class="search-button" placeholder="Search">
+                    <label for="search">
+                        <img src="./icons-20240123T161436Z-001/icons/header/search.svg" alt="Search" title="search"
+                            class="see-more align-itemsCenter cursorPointer">
+                    </label>
+                </form>
+                <figure>
+                    <img title="headerDashboard" src="./icons-20240123T161436Z-001/icons/header/headerDashboard.svg"
+                        alt="headerDashboard" class="cursorPointer">
+                </figure>
+                <div class="notificationsInfo cursorPointer ">
+                    <figure>
+                        <img title="notifications" src="./icons-20240123T161436Z-001/icons/header/notifications.svg"
+                            alt="notifications ">
+                    </figure>
+                    <div class="numberofnotifications">
+                        <p>5</p>
+                    </div>
+                    <div class="info">
+                        <p>John Doe sent a message</p>
+                        <p>Someone viewed your profile</p>
+                        <p>John Doe liked</p>
+                        <p>John Doe sent a message</p>
+                        <p>John Doe sent a message</p>
+                    </div>
+                </div>
+                <figure>
+                    <img title="headerAvatar" src="./icons-20240123T161436Z-001/icons/header/headerAvatar.svg"
+                        alt="headerAvatar">
+                </figure>
+            </div>
+        </header>
+        <main class="dGrid">
+            <section class="firstCard border-radius20px ">
+                <div class="dFlex gap2rem">
+                    <figure><img src="./icons-20240123T161436Z-001/icons/cards/language.svg" alt="language"
+                            class="language boxShadow cardsimg"></figure>
+                    <h1>Global sales by Top Locations</h1>
+                </div>
+                <br>
+                <div class="dFlex justifycontentSpacearound">
+                    <table>
+                        <tr>
+                            <td class="flags"><img src="./flags-20240123T161427Z-001/flags/albania.svg"
+                                    class="flagssize" alt="Albania"></td>
+                            <td>Albania</td>
+                            <td>2.920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td class="dFlex align-itemsCenter flags"><img
+                                    src="./flags-20240123T161427Z-001/flags/germany.svg" class="flagssize"
+                                    alt="Germany"></td>
+                            <td>Germany</td>
+                            <td>1.300</td>
+                            <td>4.34%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./flags-20240123T161427Z-001/flags/italy.svg" class="flagssize" alt="Italy">
+                            </td>
+                            <td>Italy</td>
+                            <td>760</td>
+                            <td>20.93%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./flags-20240123T161427Z-001/flags/us.svg" class="flagssize" alt="USA"></td>
+                            <td>USA</td>
+                            <td>690</td>
+                            <td>40.44%</td>
+                        </tr>
+                        <tr>
+                            <td class="dFlex align-itemsCenter flags "><img class="flagssize"
+                                    src="./flags-20240123T161427Z-001/flags/kosovo.svg" alt="Kosovo"></td>
+                            <td>Kosovo</td>
+                            <td>6.190</td>
+                            <td>4.44%</td>
+                        </tr>
+                    </table>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1504723.9340106028!2d19.58282439098836!3d42.55712038189455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1706809786295!5m2!1sen!2s"
+                        width="900" height="185" style="border:0;" allowfullscreen="" loading="lazy" class="paddingY10"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <div class="dFlex justifycontentSpacebetween marginY30">
+                <section class="secondCards border-radius20px ">
+                    <div class="dFlex justifycontentSpacebetween">
+                        <figure>
+                            <img src="./icons-20240123T161436Z-001/icons/cards/couch.svg" alt="Couch"
+                                class="couch cardsimg boxShadow ">
+                        </figure>
+                        <div class="marginX20pxY10">
+                            <h5>Bookings</h5>
+                            <h1>184</h1>
+                        </div>
+                    </div>
+                    <figure class="dFlex warning align-itemsCenter">
+                        <img src="./icons-20240123T161436Z-001/icons/cards/warning.svg" alt="warning ">
+                        <figcaption>Get more space </figcaption>
+                    </figure>
+                </section>
+                <section class="secondCards border-radius20px ">
+                    <div class="dFlex justifycontentSpacebetween">
+                        <figure>
+                            <img src="./icons-20240123T161436Z-001/icons/cards/equalizer.svg" alt="Couch"
+                                class="equalizer cardsimg boxShadow ">
+                        </figure>
+                        <div class="marginX20pxY10">
+                            <h5>Website Visits</h5>
+                            <h1>75.521</h1>
+                        </div>
+                    </div>
+                    <figure class="dFlex warning align-itemsCenter">
+                        <img src="./icons-20240123T161436Z-001/icons/cards/tracked.svg" alt="tracked ">
+                        <figcaption>Tracked from Google Analytics </figcaption>
+                    </figure>
+                </section>
+            </div>
+            <div class="dFlex justifycontentSpacebetween">
+                <section class="secondCards border-radius20px ">
+                    <div class="dFlex justifycontentSpacebetween">
+                        <figure>
+                            <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view"
+                                class="view cardsimg boxShadow ">
+                        </figure>
+                        <div class="marginX20pxY10">
+                            <h5>Revenue</h5>
+                            <h1>$34,245</h1>
+                        </div>
+                    </div>
+                    <figure class="dFlex warning align-itemsCenter">
+                        <img src="./icons-20240123T161436Z-001/icons/cards/calendar.svg" alt="calendar ">
+                        <figcaption>Last 24 hours </figcaption>
+                    </figure>
+                </section>
+                <section class="secondCards border-radius20px ">
+                    <div class="dFlex justifycontentSpacebetween">
+                        <figure>
+                            <img src="./icons-20240123T161436Z-001/icons/cards/public.svg" alt="public"
+                                class="public cardsimg boxShadow ">
+                        </figure>
+                        <div class="marginX20pxY10">
+                            <h5> Followers</h5>
+                            <h1>+100</h1>
+                        </div>
+                    </div>
+                    <figure class="dFlex warning align-itemsCenter">
+                        <img src="./icons-20240123T161436Z-001/icons/cards/update.svg" alt="update ">
+                        <figcaption>Just updated </figcaption>
+                    </figure>
+                </section>
+            </div>
+
+            <section class="paddingY40">
+                <h1>Manage listings</h1>
+                <div class="card border-radius20px  ">
+                    <div class="imagepR">
+                    <figure  class="">
+                        <img src="./download-2114931675/images/images/card-1.jpeg" class=" cardimg border-radius20px "
+                            alt="Card 1">
+                    </figure>
+                    <div class="dFlex imagepA">
+                    <figure>
+                        <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view">
+                    </figure>
+                    <figure>
+                        <img src="./icons-20240123T161436Z-001/icons/cards/edit.svg" alt="edit">
+                    </figure>
+                    <figure>
+                        <img src="./icons-20240123T161436Z-001/icons/cards/delete.svg" alt="delete">
+                    </figure>
+                </div>
+                </div>
+                    <div class="paddingY10">
+                    <h1 >Cozy 5 stars Apartment</h1>
+                    <p class="paddingY40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero nulla deleniti quis sint. adipisicing elit. Vero nulla deleniti quis sint. </p></div>
+               <div class="dFlex cardbottom justifycontentSpacebetween align-itemsCenter">
+                
+                    <p>$899/Night</p> 
+                    <div class="dFlex align-itemsCenter">
+               <figure><img src="./icons-20240123T161436Z-001/icons/cards/location.svg"  alt="location"></figure>
+            <p>Barcelona, Spain</p></div>
+                </div>
+            </div>
+                
+            </section>
+        </main>
+        <footer>
+
+        </footer>
     </div>
 </body>
 

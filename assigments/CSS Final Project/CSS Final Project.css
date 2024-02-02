@@ -1,44 +1,270 @@
 /* Global */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+}
+
+.paddingY40 {
+    padding: 40px;
+}
+
+.marginY30 {
+    margin: 30px 0;
+}
+
+.marginX20pxY10 {
+    margin: 0 10px 20px 0;
+}
+
+.justifycontentSpacebetween {
+    justify-content: space-between;
+}
+
+.border-radius20px {
+    border-radius: 20px;
+}
+
+.cardsimg {
+    padding: 20px;
+    margin: -45px 0 0 30px;
+}
+
+.boxShadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dGrid {
+    display: grid;
 }
 
 .dFlex {
     display: flex;
 }
 
-.avatar {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-
-}
-
-.itemsCenter {
+.align-itemsCenter {
     align-items: center;
 }
 
-.gap1rem {
-    gap: 1rem;
+.gap2rem {
+    gap: 2rem;
 }
-.container{
+
+.margin10 {
+    margin: 5px 0;
+}
+
+.justifycontentSpacearound {
+    justify-content: space-around;
+}
+
+.gridtemplatecolumnsAuto1Auto {
+    grid-template-columns: auto 1fr auto;
+}
+
+.active {
+    background-color: orangered;
+    padding: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: rgba(128, 128, 128, 0.534);
+    cursor: pointer;
+}
+
+.paddingY10 {
+    padding: 10px 0;
+}
+
+.border-radius7px {
+    border-radius: 7px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+body {
+    grid-template-columns: auto 1fr;
+    height: 300vh;
+}
+
+
+/* Aside */
+aside {
+    background: url(./download-2114931675/images/images/sidebar-1.jpg) rgba(0, 0, 0, 0.744);
+    background-blend-mode: color;
+    padding: 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    right: 0;
     height: 100vh;
 }
 
-main {
-    flex: 11;
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
-li, a{
-    list-style: none;
-    text-decoration: none;
+/* Right Side */
+.right-side {
+    background-color: rgb(177, 177, 177);
+    align-items: start;
+    grid-template-rows: 5% auto;
+    padding: 5px 20px;
+}
+
+/* Header */
+header {
+    justify-content: space-between;
+}
+
+.see-more {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 30px;
+    width: 50px;
+    padding: 5px 0;
+    margin: 0 10px 0 0;
+    box-shadow: 0px;
+    transition: box-shadow 1s;
+}
+
+.notificationsInfo {
+    position: relative;
+}
+
+.numberofnotifications {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    text-align: center;
     color: white;
 }
-/* Aside */
-aside {
-    flex: 2;
-    background: rgba(0, 0, 0, 0.512) url(./download-2114931675/images/images/sidebar-1.jpg);
-    
-    padding: 15px; 
+
+.info {
+    position: absolute;
+    width: 200px;
+    left: -185px;
+    visibility: hidden;
+}
+
+. .info {
+    visibility: visible;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    display: block;
+}
+
+.see-more:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    border-bottom: 2px rgb(122, 122, 122) solid;
+    color: #333;
+    outline: none;
+}
+
+.search-button:focus {
+    border-bottom: 2px rgb(89, 0, 255) solid;
+}
+
+/* Main */
+.firstCard {
+    width: 1fr;
+    height: auto;
+    background-color: whitesmoke;
+}
+
+.language {
+    background-color: green;
+}
+
+table {
+    border-collapse: collapse;
+    height: 50px;
+}
+
+td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.flagssize {
+    height: 35px;
+}
+
+.secondCards {
+    width: 45%;
+    background-color: whitesmoke;
+    margin: 30px 0 0 0;
+    padding: 20px;
+}
+
+.couch {
+    background-color: yellow;
+}
+
+.warning {
+    padding: 10px;
+    border-top: 1px solid rgb(145, 145, 145);
+}
+
+.equalizer {
+    background-color: rgb(153, 0, 255);
+}
+
+.view {
+    background-color: green;
+}
+
+.public {
+    background-color: blue;
+}
+
+.card {
+    width: 30%;
+    background-color: whitesmoke;
+    height: auto;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.cardimg {
+    width: 300px;
+    margin: -30px 30px 40px 30px;
+    transition: margin 2s;
+}
+.cardimg:hover, .imagepA:hover{
+    margin: -50px 30px 60px 30px;
+    visibility: visible;
+}
+.cardbottom {
+    border-top: 1px solid gray;
+    align-items: end;
+    padding: 10px;
+}
+
+.imagepR {
+    position: relative;
+}
+
+.imagepA {
+    position: absolute;
+    left: 38%;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    visibility: hidden;
 }

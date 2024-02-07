@@ -9,7 +9,7 @@
 </head>
 
 <body class="dGrid">
-    <aside>
+    <aside class="hidderesponsive">
         <h1>CP COOL PAGE</h1>
         <hr>
         <div class="dGrid gridtemplatecolumnsAuto1Auto gap2rem align-itemsCenter  icon paddingY10 border-radius7px ">
@@ -93,17 +93,22 @@
             <figure><img src="./icons-20240123T161436Z-001/icons/asides/expandMore.svg" alt="expandMore"></figure>
         </div>
     </aside>
-    <div class="dGrid right-side">
+    <div class=" right-side">
         <header class="dFlex align-itemsCenter  ">
             <div class="dFlex align-itemsCenter">
-                <figure>
+                <figure class="hidderesponsive">
                     <img title="see-more" class="see-more paddingY10 cursorPointer"
                         src="./icons-20240123T161436Z-001/icons/header/more.svg" alt="more">
                 </figure>
                 <h1>Dashboard</h1>
             </div>
-
-            <div class="dFlex align-itemsCenter rightHeader margin10 gap2rem">
+            <div class="onlyresponsive">
+                <figure>
+                    <img title="menu" class=" paddingY10 cursorPointer"
+                        src="./icons-20240123T161436Z-001/icons/header/menu.svg" alt="menu">
+                </figure>
+            </div>
+            <div class="dFlex align-itemsCenter rightHeader margin10 gap2rem hidderesponsive">
                 <form class=" dFlex align-itemsCenter">
                     <input type="search" id="search" class="search-button" placeholder="Search">
                     <label for="search">
@@ -137,16 +142,16 @@
                 </figure>
             </div>
         </header>
-        <main class="dGrid">
-            <section class="firstCard border-radius20px ">
-                <div class="dFlex gap2rem">
+        <main class="dGrid marginY30 ">
+            <section class="firstCard border-radius20px width970px">
+                <div class="dFlex  gap2rem ">
                     <figure><img src="./icons-20240123T161436Z-001/icons/cards/language.svg" alt="language"
                             class="language boxShadow cardsimg"></figure>
                     <h1>Global sales by Top Locations</h1>
                 </div>
                 <br>
-                <div class="dFlex justifycontentSpacearound">
-                    <table>
+                <div class="dFlex justifycontentSpacearound firstCardHeader">
+                    <table class="width1000px">
                         <tr>
                             <td class="flags"><img src="./flags-20240123T161427Z-001/flags/albania.svg"
                                     class="flagssize" alt="Albania"></td>
@@ -185,11 +190,11 @@
                     </table>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1504723.9340106028!2d19.58282439098836!3d42.55712038189455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1706809786295!5m2!1sen!2s"
-                        width="900" height="185" style="border:0;" allowfullscreen="" loading="lazy" class="paddingY10"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="900" height="185" style="border:0;" allowfullscreen="" loading="lazy"
+                        class="paddingY10 width1000px" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
-            <div class="dFlex justifycontentSpacebetween marginY30">
+            <div class="dFlex justifycontentSpacebetween marginY30 thesecondCards">
                 <section class="secondCards border-radius20px ">
                     <div class="dFlex justifycontentSpacebetween">
                         <figure>
@@ -207,7 +212,7 @@
                     </figure>
                 </section>
                 <section class="secondCards border-radius20px ">
-                    <div class="dFlex justifycontentSpacebetween">
+                    <div class="dFlex justifycontentSpacebetween ">
                         <figure>
                             <img src="./icons-20240123T161436Z-001/icons/cards/equalizer.svg" alt="Couch"
                                 class="equalizer cardsimg boxShadow ">
@@ -223,11 +228,11 @@
                     </figure>
                 </section>
             </div>
-            <div class="dFlex justifycontentSpacebetween">
+            <div class="dFlex justifycontentSpacebetween thesecondCards mar">
                 <section class="secondCards border-radius20px ">
                     <div class="dFlex justifycontentSpacebetween">
                         <figure>
-                            <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view"
+                            <img src="./icons-20240123T161436Z-001/icons/cards/storefront.svg" alt="view"
                                 class="view cardsimg boxShadow ">
                         </figure>
                         <div class="marginX20pxY10">
@@ -257,43 +262,144 @@
                     </figure>
                 </section>
             </div>
+            <section class="paddingY40 TheCards ">
+                <h1 class="h1">Manage listings</h1>
+                <section class=" thirdCards dFlex justifycontentSpaceevenly">
+                    <section class="justifycontentSpaceevenly">
+                        <div class="card border-radius20px  imagepR">
+                            <div class="">
+                                <div class="dFlex imagepA ">
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view"
+                                            title="view" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/edit.svg" alt="edit"
+                                            title="edit" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/delete.svg" alt="delete"
+                                            title="delete" class="cursorPointer">
+                                    </figure>
+                                </div>
+                                <figure class="">
+                                    <img src="./download-2114931675/images/images/card-1.jpeg"
+                                        class=" cardimg border-radius20px cursorPointer" alt="Card 1">
+                                </figure>
 
-            <section class="paddingY40">
-                <h1>Manage listings</h1>
-                <div class="card border-radius20px  ">
-                    <div class="imagepR">
-                    <figure  class="">
-                        <img src="./download-2114931675/images/images/card-1.jpeg" class=" cardimg border-radius20px "
-                            alt="Card 1">
-                    </figure>
-                    <div class="dFlex imagepA">
-                    <figure>
-                        <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view">
-                    </figure>
-                    <figure>
-                        <img src="./icons-20240123T161436Z-001/icons/cards/edit.svg" alt="edit">
-                    </figure>
-                    <figure>
-                        <img src="./icons-20240123T161436Z-001/icons/cards/delete.svg" alt="delete">
-                    </figure>
-                </div>
-                </div>
-                    <div class="paddingY10">
-                    <h1 >Cozy 5 stars Apartment</h1>
-                    <p class="paddingY40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero nulla deleniti quis sint. adipisicing elit. Vero nulla deleniti quis sint. </p></div>
-               <div class="dFlex cardbottom justifycontentSpacebetween align-itemsCenter">
-                
-                    <p>$899/Night</p> 
-                    <div class="dFlex align-itemsCenter">
-               <figure><img src="./icons-20240123T161436Z-001/icons/cards/location.svg"  alt="location"></figure>
-            <p>Barcelona, Spain</p></div>
-                </div>
-            </div>
-                
+                                <div class="paddingY10">
+                                    <h1>Cozy 5 stars Apartment</h1>
+                                    <p class="paddingY40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                                        nulla
+                                        deleniti quis sint. adipisicing elit. Vero nulla deleniti quis sint. </p>
+                                </div>
+                                <div class="dFlex cardbottom justifycontentSpacebetween align-itemsCenter">
+
+                                    <p>$899/Night</p>
+                                    <div class="dFlex align-itemsCenter">
+                                        <figure><img src="./icons-20240123T161436Z-001/icons/cards/location.svg"
+                                                alt="location">
+                                        </figure>
+                                        <p>Barcelona, Spain</p>
+                                    </div>
+                                </div>
+                    </section>
+                    <section class=" ">
+                        <div class="card border-radius20px  imagepR">
+                            <div class="">
+                                <div class="dFlex imagepA ">
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view"
+                                            title="view" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/edit.svg" alt="edit"
+                                            title="edit" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/delete.svg" alt="delete"
+                                            title="delete" class="cursorPointer">
+                                    </figure>
+                                </div>
+                                <figure class="">
+                                    <img src="./download-2114931675/images/images/card-2.jpeg"
+                                        class=" cardimg border-radius20px cursorPointer" alt="Card 1">
+                                </figure>
+
+                                <div class="paddingY10">
+                                    <h1>Office Studio</h1>
+                                    <p class="paddingY40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                                        nulla
+                                        deleniti quis sint. adipisicing elit. Vero nulla deleniti quis sint. </p>
+                                </div>
+                                <div class="dFlex cardbottom justifycontentSpacebetween align-itemsCenter">
+
+                                    <p>$1.119/Night</p>
+                                    <div class="dFlex align-itemsCenter">
+                                        <figure><img src="./icons-20240123T161436Z-001/icons/cards/location.svg"
+                                                alt="location">
+                                        </figure>
+                                        <p>London, UK</p>
+                                    </div>
+                                </div>
+                    </section>
+
+                    <section class=" ">
+                        <div class="card border-radius20px  imagepR">
+                            <div class="">
+                                <div class="dFlex imagepA ">
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/view.svg" alt="view"
+                                            title="view" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/edit.svg" alt="edit"
+                                            title="edit" class="cursorPointer">
+                                    </figure>
+                                    <figure>
+                                        <img src="./icons-20240123T161436Z-001/icons/cards/delete.svg" alt="delete"
+                                            title="delete" class="cursorPointer">
+                                    </figure>
+                                </div>
+                                <figure class="">
+                                    <img src="./download-2114931675/images/images/card-3.jpeg"
+                                        class=" cardimg border-radius20px cursorPointer " alt="Card 1">
+                                </figure>
+
+                                <div class="paddingY10">
+                                    <h1>Beautiful Castle</h1>
+                                    <p class="paddingY40">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                                        nulla
+                                        deleniti quis sint. adipisicing elit. Vero nulla deleniti quis sint. </p>
+                                </div>
+                                <div class="dFlex cardbottom justifycontentSpacebetween align-itemsCenter">
+
+                                    <p>$459/Night</p>
+                                    <div class="dFlex align-itemsCenter">
+                                        <figure><img src="./icons-20240123T161436Z-001/icons/cards/location.svg"
+                                                alt="location">
+                                        </figure>
+                                        <p>Milan, Italy</p>
+                                    </div>
+                                </div>
+                    </section>
+                </section>
             </section>
         </main>
-        <footer>
+        <hr class="line">
+        <footer class="dFlex justifycontentSpacebetween marginY30">
 
+            <section>
+                <nav class="dFlex gap2rem">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                </nav>
+            </section>
+            <section>
+                <p>&copy; John Doe 2023</p>
+            </section>
         </footer>
     </div>
 </body>

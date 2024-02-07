@@ -5,11 +5,11 @@
 }
 
 .paddingY40 {
-    padding: 40px;
+    padding: 40px 0 0 0;
 }
 
 .marginY30 {
-    margin: 30px 0;
+    margin: 80px 0;
 }
 
 .marginX20pxY10 {
@@ -18,6 +18,10 @@
 
 .justifycontentSpacebetween {
     justify-content: space-between;
+}
+
+.justifycontentSpaceevenly {
+    justify-content: space-evenly;
 }
 
 .border-radius20px {
@@ -87,9 +91,16 @@
 
 body {
     grid-template-columns: auto 1fr;
-    height: 300vh;
+    height: auto;
+    font-family: 'Roboto';
 }
 
+h1 {
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
 
 /* Aside */
 aside {
@@ -99,7 +110,7 @@ aside {
     color: white;
     position: sticky;
     top: 0;
-    right: 0;
+    bottom: 0;
     height: 100vh;
 }
 
@@ -113,13 +124,16 @@ aside {
 .right-side {
     background-color: rgb(177, 177, 177);
     align-items: start;
-    grid-template-rows: 5% auto;
     padding: 5px 20px;
 }
 
 /* Header */
 header {
     justify-content: space-between;
+}
+
+.onlyresponsive {
+    display: none;
 }
 
 .see-more {
@@ -156,11 +170,18 @@ header {
     visibility: hidden;
 }
 
-. .info {
+.notificationsInfo:hover .info {
     visibility: visible;
     background-color: rgb(255, 255, 255);
     padding: 10px;
-    display: block;
+}
+
+.notificationsInfo:hover .info p {
+    padding: 10px;
+}
+
+.notificationsInfo:hover .info p:hover {
+    background-color: orangered;
 }
 
 .see-more:hover {
@@ -233,7 +254,7 @@ td {
 }
 
 .card {
-    width: 30%;
+    width: 350px;
     background-color: whitesmoke;
     height: auto;
     margin: 50px 0;
@@ -242,13 +263,31 @@ td {
 
 .cardimg {
     width: 300px;
-    margin: -30px 30px 40px 30px;
-    transition: margin 2s;
+    transform: translateY(-40px);
+    transition: transform 3s;
 }
-.cardimg:hover, .imagepA:hover{
-    margin: -50px 30px 60px 30px;
+
+.imagepR:hover .cardimg {
+    transform: translateY(-70px);
+}
+
+.imagepA {
+    position: absolute;
+    left: 4%;
+    top: 140px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    justify-content: space-evenly;
+    visibility: hidden;
+    transition: 4s;
+}
+
+.imagepR:hover .imagepA {
     visibility: visible;
 }
+
+
 .cardbottom {
     border-top: 1px solid gray;
     align-items: end;
@@ -257,14 +296,117 @@ td {
 
 .imagepR {
     position: relative;
+
 }
 
-.imagepA {
-    position: absolute;
-    left: 38%;
-    top: 70%;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    visibility: hidden;
+/* Footer */
+
+nav,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: bolder;
+    justify-content: start;
+}
+
+@media(max-width: 1002px) {
+    *{
+        /* overflow-x: hidden; */
+    }
+    .hidderesponsive {
+        display: none;
+    }
+
+    .onlyresponsive {
+        display: contents;
+    }
+
+    .width970px {
+        width: 900px;
+    }
+
+    body {
+        width: auto;
+    }
+
+    .firstCard {
+        height: auto;
+    }
+
+    .firstCardHeader {
+        display: block;
+    }
+
+    table {
+        border-collapse: collapse;
+        height: 200px;
+        margin: 0 20px;
+    }
+
+    .width1000px {
+        width: 800px;
+    }
+
+    iframe {
+        width: 1000px;
+        margin: 0 20px;
+        height: 500px;
+    }
+
+    .cardimg {
+        width: 800px;
+    }
+.card{
+    width: 900px; 
+}
+    .thirdCards {
+        display: block;
+        margin: 20px 0 0 20px ;
+      gap: 12rem;
+    }
+    .imagepA{
+        left: 4%;
+        top: 470px;
+        width: 100%;
+    }
+   .h1{
+    margin:  0 0 40px 25px ;
+   }
+   .line{
+    margin-left: 28px;
+   }
+   nav{
+margin: 0 0 0 45px;
+   }
+}
+@media (max-width:480px){
+    body{
+        width: 400px;
+    }
+    .thesecondCards{
+        display: block ;
+        width: 900px;
+    }
+    .mar{
+        margin: -40px 0 0  0;
+    }
+    .firstCard{
+        width: 450px;
+    }
+    .width1000px{
+        width: 400px;
+    }
+    .card{
+        width: 450px;
+    }
+.cardimg{
+    width: 400px;
+}
+.imagepA{
+    top: 200px;
+}
+footer{
+width: 450px;
+}
 }

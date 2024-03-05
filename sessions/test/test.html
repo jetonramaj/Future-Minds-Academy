@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let  number = parseInt(prompt('Write a number'));
+
+        // number % 2 === 0? alert('even') : alert('odd');
+        
+        let user = parseFloat(prompt('Shkruaje nje numer'));
+        let operation = prompt ('shkruani nje operacin')
+        let theUser = parseFloat(prompt('Shkruaje nje numer tjeter'));
+        
+        let result;
+        if (operation === "minus"){
+            let result = user - theUser;
+        }
+        else if (operation === 'plus'){
+            let result = user + theUser;
+        }
+        else if (operation === 'pjestim'){
+            let result = user / theUser;
+        }
+        else if (operation === 'shumezim'){
+            let result = user * theUser;
+        }
+document.write('the answer is '+result);
+    </script>
+</body>
+</html>

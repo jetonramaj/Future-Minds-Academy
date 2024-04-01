@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="h3">Temp 0</h3>
+    <select name="" id="" class="tempList" onechange="changeTemp(this)">
+        <option value="1">1</option>
+    </select>
+
+    <script>
+
+        const tempList = document.querySelector('.tempList');
+   const h3 = document.querySelector('.h3');
+   let buildOptions = '';
+
+   for( let run=0; run<=30; run++){
+    buildOptions += ' <option value="'+run+'">'+run+'</option>';
+   }
+  
+//    buildOptions += ' <option value="2">2</option>';
+
+   tempList.innerHTML = buildOptions;
+ 
+function changeTemp(opt){
+    h3.innerHTML = "Temp:   " + opt.value
+    console.log(opt.value);
+}
+
+    </script>
+</body>
+</html>

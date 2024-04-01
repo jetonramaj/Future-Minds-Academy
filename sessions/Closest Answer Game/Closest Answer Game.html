@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+let random = Math.floor(Math.random() * 20) + 1;
+let playerOne = parseFloat(prompt('Enter a number'));
+let playerTwo = parseFloat(prompt('Enter a number'));
+
+if (isNaN(playerOne) || isNaN(playerTwo) ||
+    playerOne < 0 || playerOne > 20 ||
+    playerTwo < 0 || playerTwo > 20) {
+    throw new Error('Invalid Input!');
+}
+
+let playerOneDistance = Math.abs(random - playerOne);
+let playerTwoDistance = Math.abs(random - playerTwo);
+alert(`The correct answer is ${random}`);
+
+if (playerOneDistance < playerTwoDistance) {
+    alert('Player one wins!');
+} else if (playerTwoDistance < playerOneDistance) {
+    alert('Player two wins!');
+} else {
+    alert('It\'s a tie!');
+}
+
+    </script>
+</body>
+</html>

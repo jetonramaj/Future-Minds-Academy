@@ -3,10 +3,23 @@ let rrafshi = document.createElement("canvas");
     rrafshi.height = 480;
     document.body.appendChild(rrafshi);
 
+    let br = document.createElement("br");
+    document.body.appendChild(br);
+
+    let startOver = document.createElement("button");
+    startOver.innerText = "Start Over";
+    startOver.style.fontSize = "20px";
+    startOver.style.padding = "10px";
+    startOver.style.visibility = "hidden"
+    document.body.appendChild(startOver);
+
+
 const ctx = rrafshi.getContext('2d');
 
 let points = 0;
 let ticker = 10;
+let winPt = 2
+let winLose = false 
 
 let bgrReady = false;
 let bgrImg = new Image();
@@ -77,28 +90,32 @@ let render = function(){
         && maca.y < (miu.y + miu.height)
     ){
         miuPosition();
-        points++;
+       if(ticker !=0 ) {points++;}
     }
 
     ctx.font = "20px serif";
     ctx.fillStyle = "white";
     ctx.fillText("Points: "+points, 20, 30);
     ctx.fillText("Timer: "+ticker, 400, 30);
+   
+    if(winLose)
+if(points >= winPt){
+     ctx.fillText("You WIN!: ", 200, 30);
+   
+}
+else {ctx.fillText("You LOSE!: ", 200, 30);}
 
-    ctx.fillText("You LOSE!: ", 200, 30);
-    ctx.fillText("You WIN!: ", 200, 30);
-    
+
 }
 
 
 let startTimer = function(){
-    if (ticker == !0){ticker--;}
-       
-//     clearInterval(timeInterval)
-   
-
-    
+    if (ticker != 0){ticker--;} else {winLose = true;}
+         
 }
+
+
+startOver.addEventListener("click," )
 
 let renderInterval = setInterval(render, 10);
 let timerInterval = setInterval(startTimer, 1000);

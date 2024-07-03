@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays exercises</h1>
+    <div class="showData">
+
+    </div>
+
+    <script>
+        let students = [ "Ridvan", "Aliu", 41, "ridvan@eduongo.com", 1982];
+        let h1Element = document.createElement("h1");
+        h1Element.textContent = "Name " + " " + students[0] + " " + students[1];
+        document.body.appendChild(h1Element);
+
+        let h2Element = document.createElement("h2");
+        h2Element.textContent = " Age" + " " + students[2];
+        document.body.appendChild(h2Element);
+
+        let hElement = document.createElement("h2");
+        hElement.textContent = " email:" + " " + students[3];
+        document.body.appendChild(hElement);
+    
+        let Element = document.createElement("h2");
+        Element.textContent = " Year of Birth:" + " " + students[4];
+        document.body.appendChild(Element);
+    
+    </script>
+</body>
+</html>

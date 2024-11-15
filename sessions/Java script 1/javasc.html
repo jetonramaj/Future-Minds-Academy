@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        li{
+            cursor: pointer;
+            font-size: 30px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: antiquewhite;
+            list-style-type: none;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li  onclick="pageCliced(this)"  >Home </li>
+    <li  onclick="pageCliced(this)"  >Services  </li>
+    <li  onclick="pageCliced(this)" >About </li>
+    <li  onclick="pageCliced(this)" >about</li>
+</ul>
+<h1 class="title"> home</h1>
+
+<script>
+const title = document.querySelector('.title');
+
+function pageCliced(obj){
+    title.textContent = obj.textContent;
+ 
+    
+}
+
+</script>
+</body>
+</html>

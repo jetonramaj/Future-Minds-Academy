@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table border="1" width="50">
+        <tr>
+            <th>Body Parts</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td id="table">Desk</td>
+        </tr>
+        <tr>
+            <td>Color:</td>
+            <td id="color">Brown</td>
+        </tr>
+        <tr>
+            <td>Width:</td>
+            <td id="width"></td>
+        </tr>
+        <tr>
+            <td>Height:</td>
+            <td id="height">60cm</td>
+        </tr>
+    </table>
+
+    <script>
+const desk = document.querySelector('#table');
+const Color = document.querySelector('#color');
+const width = document.querySelector('#width');
+const height = document.querySelector('#height');
+
+
+
+let table = {};
+ desk.innerHTML = table.name = "Table";
+ Color.innerHTML = table.Color = "Black";
+ width.innerHTML = table.width = "200";
+ height.innerHTML =table.height = "40";
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="500"></canvas>
+
+    <script>
+        let maca = {};
+        maca.x = 200;
+        maca.y = 200;
+        maca.width = 128;
+        maca.height = 128;
+        maca.name = "Tom";
+        maca.color = "white";
+
+        let miu = {};
+        miu.x = 30;
+        miu.y = 75;
+        miu.width = 64;
+        miu.height = 64;
+        miu.name = "jerry";
+        miu.color = "black";
+
+
+        const canvas = document.querySelector("#canvas");
+        let ctx = canvas.getContext("2d");
+        // ctx  a variable name but mostly it is used when getting context for a canvas element in a html page
+        // getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
+
+        const myImage = new Image();
+        myImage.src = "maca-cute.png";
+
+        myImage.onload = function () {
+           // Position the image on the canvas:
+            ctx.drawImage(myImage, maca.x, maca.y);
+        }
+        const mysImage = new Image();
+        mysImage.src = "miu.png";
+
+        mysImage.onload = function () {
+            ctx.drawImage(mysImage, miu.x, miu.y);
+        }
+
+        window.addEventListener('keydown', function (e) {
+            if (e.key == "ArrowRight") {
+                ctx.clearRect(maca.x, maca.y, maca.width, maca.height);
+                maca.x += 10;
+                ctx.drawImage(myImage, maca.x, maca.y);
+            }
+            if (e.key == "ArrowLeft") {
+                ctx.clearRect(maca.x, maca.y, maca.width, maca.height);
+                maca.x -= 10;
+                ctx.drawImage(myImage, maca.x, maca.y);
+            }
+
+            if (e.key == "ArrowUp") {
+                ctx.clearRect(maca.x, maca.y, maca.width, maca.height);
+                maca.y -= 10;
+                ctx.drawImage(myImage, maca.x, maca.y);
+            }
+            if (e.key == "ArrowDown") {
+                ctx.clearRect(maca.x, maca.y, maca.width, maca.height);
+                maca.y += 10;
+                ctx.drawImage(myImage, maca.x, maca.y);
+            }
+
+            if (e.key == "d") {
+                ctx.clearRect(maca.x, maca.y, maca.width, maca.height);
+            }
+
+            if (e.key == "m") {
+                ctx.drawImage(myImage, maca.x, maca.y);
+            }
+        });
+    </script>
+</body>
+
+</html>

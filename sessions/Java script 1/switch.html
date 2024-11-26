@@ -1,0 +1,42 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    
+    <script>
+        let num1 = 6;
+        let num2 = 3;
+
+        let action = "sum";
+        let results = 0;
+
+        switch(action){
+            case "sum":
+                results = num1 + num2;
+            break;
+
+            case "diff":
+                results = num1 - num2;
+            break;
+
+            case "multiply":
+                results = num1 * num2;
+            break;
+
+            case "divide":
+                results = num1 / num2;
+            break;
+
+            default:
+                results = 0;
+        }
+
+        console.log(action + "= " + results);
+
+    </script>
+</body>
+</html>

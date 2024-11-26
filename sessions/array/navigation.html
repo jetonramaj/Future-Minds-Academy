@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        nav {
+            width: 500px;
+            margin: 30px auto;
+        }
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li { 
+            background-color: bisque; 
+            padding: 20px; 
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="navbar">
+        </ul>
+    </nav>
+
+    <script>
+        const navbar = document.querySelector("#navbar");
+                        // 0        1          2
+        let navlinks = ["Home", "Services", "About", "Contact"];
+
+        for(let i=0; i<navlinks.length; i++){
+            navbar.innerHTML += '<li>' + navlinks[i] + '</li>';
+        }
+        
+    </script>
+</body>
+</html>

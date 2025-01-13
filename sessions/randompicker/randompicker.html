@@ -25,7 +25,7 @@
 
         <div class="loop-slider">
             <div class="inner">
-                <div class="tag">Sample Task 1  <div class="x">❌</div> </div> 
+              
             </div>
         </div>
 
@@ -45,9 +45,30 @@
         let selectedNames = [];
         let selectionCount = 0; 
 
+        // Lista e fjalëve të ndaluara
+        const forbiddenWords = ["kari", "lopa", "muti"]; // Zëvendëso me fjalët që nuk lejohen
+
         function additem() {
-            allNames.push(emrat.value);
+            const name = emrat.value.trim();
+            
+            // Kontrollo nëse emri përmban fjalë të ndaluara
+            if (containsForbiddenWords(name)) {
+                alert("Emri përmban fjalë të ndaluara! Ju lutemi, provoni një tjetër.");
+                return;
+            }
+
+            allNames.push(name);
             randomTasks();
+        }
+
+        // Funksion për të kontrolluar nëse emri përmban fjalë të ndaluara
+        function containsForbiddenWords(name) {
+            for (let word of forbiddenWords) {
+                if (name.toLowerCase().includes(word.toLowerCase())) {
+                    return true; // Kthe true nëse gjen fjalën e ndaluar
+                }
+            }
+            return false; // Kthe false nëse nuk ka fjalë të ndaluara
         }
 
         function randomTasks() {

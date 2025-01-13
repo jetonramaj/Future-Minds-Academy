@@ -1,0 +1,334 @@
+:root {
+    --black: #000000;
+    --cornflower-lilac: #ffaea9;
+    --salmon: #ff7b73;
+    --white: #ffffff;
+    --your-pink: #ffcccc;
+}
+
+body {
+    font-size: 10px; /* Scale value for different devices */
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--salmon);
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.c-checkbox {
+    display: none;
+}
+
+.c-checkbox:checked + .c-formContainer .c-form {
+    width: 37.5em;
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__input,
+.c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+    transition: 0.2s 0.1s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
+    content: 'Thank You! \\1F60A';
+}
+
+.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
+    pointer-events: none;
+    cursor: default;
+}
+
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+    width: 20em;
+    height: 6.25em;
+}
+
+.c-formContainer {
+    position: relative;
+    font-weight: 700;
+}
+
+.c-form,
+.c-form__toggle {
+    position: absolute;
+    border-radius: 6.25em;
+    background-color: var(--white);
+    transition: 0.2s;
+}
+
+.c-form {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.625em;
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.c-form__toggle {
+    color: var(--salmon);
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-form__toggle::before {
+    font-size: 1.75em;
+    content: attr(data-title);
+}
+
+.c-form__input,
+.c-form__button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    box-sizing: border-box;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+    font-size: 1.75em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+}
+
+.c-form__input {
+    color: var(--your-pink);
+    height: 100%;
+    width: 100%;
+    padding: 0 0.714em;
+    position: relative;
+}
+
+.c-form__input::placeholder {
+    color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 0.714em;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    color: var(--black);
+}
+
+.c-form__input:focus::placeholder,
+.c-form__input:not(:placeholder-shown)::placeholder {
+    top: -1.25em;
+    left: 0.714em;
+    font-size: 0.75em;
+    color: var(--black);
+}
+
+.c-form__input:focus {
+    color: var(--black);
+}
+
+.c-form__input:required:valid {
+    color: var(--salmon);
+}
+
+.c-form__input:required:valid + .c-form__buttonLabel {
+    color: var(--white);
+}
+
+.c-form__input:required:valid + .c-form__buttonLabel::before {
+    pointer-events: initial;
+}
+
+.c-form__buttonLabel {
+    color: var(--cornflower-lilac);
+    height: 100%;
+    width: auto;
+    position: relative;
+}
+
+.c-form__buttonLabel::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.c-form__button {
+    color: inherit;
+    padding: 0;
+    height: 100%;
+    width: 5em;
+    background-color: var(--salmon);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    word-wrap: break-word;
+}
+
+.tag-list {
+    display: flex;
+    overflow: hidden;
+    width: 30rem;
+    max-width: 90vw;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.loop-slider .inner {
+    display: flex;
+    animation: loop 10s linear infinite;
+}
+
+.x {
+    cursor: pointer;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Random {
+    background-color: rgb(62, 62, 204);
+    padding: 10px;
+    border: solid 1px rgb(62, 62, 204);
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.Random:hover {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+    transform: scale(1.2);
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    background-color: #334155;
+    border-radius: 0.4rem;
+    padding: 0.7rem 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2),
+                0 0.1rem 0.5rem rgba(0, 0, 0, 0.3),
+                0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.fade {
+    pointer-events: none;
+    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+    position: absolute;
+    inset: 0;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust the form and button for smaller screens */
+    .c-formContainer,
+    .c-form,
+    .c-form__toggle {
+        width: 90%;
+        height: auto;
+    }
+
+    .c-form__input,
+    .c-form__buttonLabel {
+        font-size: 1.5rem;
+    }
+
+    .Random {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .loop-slider .inner {
+        animation-duration: 15s; /* Slower animation for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for mobile devices */
+    .c-formContainer,
+    .c-form,
+    .c-form__toggle {
+        width: 100%;
+        height: auto;
+    }
+
+    .c-form__input,
+    .c-form__buttonLabel {
+        font-size: 1.2rem;
+    }
+
+    .Random {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+
+    .loop-slider .inner {
+        animation-duration: 20s; /* Slow down more on very small screens */
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Selector</title>
+    <style>
+        body {
+            display: flex;
+            gap: 50px;
+            font-family: sans-serif;
+        }
+        .shapeContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 300px;
+            background-color: lightgray;
+            border: 2px solid gray;
+            transition: 0.5s;
+        }
+        .shapeContainer div {
+            height: 100px;
+            width: 100px;
+        }
+
+        .shapeList {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .shapeList li {
+            background-color: lightblue;
+            padding: 20px 50px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+            transition: 0.5s;
+        }
+
+        .shapeList li:hover {
+            background-color: rgb(173, 216, 230);
+        }
+    </style>
+</head>
+<body>
+    <ul class="shapeList">
+        <li>Square</li>
+        <li>Circle</li>
+        <li>Rectangle</li>
+        <li>Triangle</li>
+    </ul>
+    <div class="shapeContainer">
+        <div id="shape"></div>
+    </div>
+
+    <script>
+        const shapeList = document.querySelector(".shapeList");
+        const shapeContainer = document.querySelector(".shapeList");
+        const shape = document.querySelector("#")
+        
+for (let i = 0; i < colorList.children.length; i++) {
+    shapeList.children[i].addEventListener("click", function (){
+        shape.style. = color
+    })
+}
+
+    </script>
+</body>
+</html>

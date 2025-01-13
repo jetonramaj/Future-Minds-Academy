@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="randompicker.css">
+</head>
+<body>
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+        <form class="c-form" action="">
+            <input class="c-form__input" placeholder="Emri" type="text" id="emrat">
+            <label class="c-form__buttonLabel" for="checkbox">
+                <button onclick="additem()" class="c-form__button" type="button">Shto Emrin </button>
+            </label>
+            <label class="c-form__toggle" for="checkbox" data-title="Shëno Emrin"></label>
+        </form>
+    </div>
+
+    <div class="app">
+        <header>
+            <h1>Random Task Picker</h1>
+        </header>
+
+        <div class="loop-slider">
+            <div class="inner">
+                <div class="tag">Sample Task 1  <div class="x">❌</div> </div> 
+            </div>
+        </div>
+
+        <button onclick="pick()" class="Random">Zgjedh Emrat Random</button>
+
+        <div id="randomResult" style="margin-top: 20px; font-size: 20px;"></div>
+
+        <div id="selectedNames" style="margin-top: 20px; font-size: 18px;"></div>
+    </div>
+
+    <script>
+        const emrat = document.querySelector('#emrat');
+        const inner = document.querySelector('.inner');
+        const randomResult = document.querySelector("#randomResult");
+        const selectedNamesDiv = document.querySelector("#selectedNames");
+
+        let allNames = [];
+        let selectedNames = [];
+        let selectionCount = 0;
+
+        function additem() {
+            allNames.push(emrat.value);
+            randomTasks();
+        }
+
+        function randomTasks() {
+            inner.innerHTML = '';
+            for (let i = 0; i < allNames.length; i++) {
+                inner.innerHTML += `
+                    <div class="tag">${allNames[i]}<div onclick="remove(${i})" class="x">❌</div></div>
+                `;
+            }
+        }
+
+        function remove(e) {
+            allNames.splice(e, 1);
+            randomTasks();
+            displaySelectedNames();
+        }
+
+        function pick() {
+            if (allNames.length < 2) {
+                randomResult.innerHTML = 'Duhet të ketë të paktën dy emra për të zgjedhur!';
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * allNames.length);
+            selectionCount++;
+            selectedNames.push(allNames[randomIndex]);
+            randomResult.innerHTML = `Emri i ${ordinal(selectionCount)} i zgjedhur është: <strong>${allNames[randomIndex]}</strong>`;
+            remove(randomIndex);
+        }
+
+        function ordinal(num) {
+            const suffix = [ "-të", "-rë"];
+            const value = num % 100;
+            return num + (suffix[(value - 20) % 10] || suffix[value] || suffix[0]);
+        }
+
+        function displaySelectedNames() {
+            selectedNamesDiv.innerHTML = `Emrat e zgjedhur: <strong>${selectedNames.join(', ')}</strong>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="additem()" >ADD item</button>
+    <ul class="tasklist">
+    </ul>
+
+
+
+    <script>
+        let allTasks = [
+        ];
+
+        function additem() {
+            allTasks.push(input.value);
+            randomTasks()
+        }
+
+
+
+        const tasklist = document.querySelector(".tasklist");
+
+        function randomTasks() {
+            tasklist.innerHTML = ''
+            for (i = 0; i < allTasks.length; i++) {
+                tasklist.innerHTML += `<li onclick="done(${i}) ">${allTasks[i]}<button >Done</button> <button onclick="edit(${i})">Edit</button>  <button onclick="deletee(${i})">Delete</button> </li>`;
+
+            }
+
+        }
+        function deletee(e) {
+            allTasks.splice(e, 1)
+            randomTasks()
+        }
+        function edit(i) {
+            allTasks[i] = prompt("Please enter ")
+            randomTasks()
+        }
+        function done(i) {
+            allTasks[i] = `<s>${allTasks[i]}</s>`;
+            randomTasks()
+        }
+    </script>
+</body>
+
+</html>

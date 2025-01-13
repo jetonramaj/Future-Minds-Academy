@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General 1</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 100px;
+            padding-top: 200px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 40px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 60pt;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1 id="number">0</h1>
+    <input type="text" name="" id="">
+    <button id="minus">-</button>
+    <button id="plus">+</button>
+
+    <p id="limit"></p>
+    <script>
+        const minus = document.querySelector("#minus");
+        const plus = document.querySelector("#plus");
+        const h1 = document.querySelector("#number");
+        const limit = document.querySelector("#limit");
+
+
+        let count = 0;
+        plus.addEventListener('click', function () {
+            h1.innerHTML = count;
+            if (count < 15) {
+                count++;
+            }
+          else {
+                limit.innerHTML = "You have reached the limit"
+            }
+        })
+
+        minus.addEventListener('click', function () {
+            if (count != 0) {
+                count--;
+            }
+            limit.innerHTML = ""
+            h1.innerHTML = count;
+        })
+
+    </script>
+</body>
+
+</html>

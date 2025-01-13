@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        body {
+            display: flex;
+            gap: 50px;
+            font-family: sans-serif;
+        }
+        h1 {
+            padding: 40px ;
+            background-color: rgb(240, 240, 240);
+            display: flex;
+            align-items: center;
+            width: 400px;
+            font-size: 60px;
+            color: black;
+            transition: 0.5s;
+        }
+        .color-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .color-list li {
+            background-color: lightblue;
+            padding: 20px 50px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+            transition: 0.5s;
+        }
+
+        .color-list li:hover {
+            background-color: rgb(173, 216, 230);
+        }
+    </style>
+</head>
+<body>
+    <ul class="color-list">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+        <li>Purple</li>
+        <li>Black</li>
+        <li>White</li>
+    </ul>
+    <h1 id="colorChange">Pick a Color</h1>
+
+    <script>
+      const colorList = document.querySelector(".color-list");
+const colorChange = document.querySelector("#colorChange");
+
+for (let i = 0; i < colorList.children.length; i++) {
+    colorList.children[i].addEventListener("click", function () {
+        const color = colorList.children[i].textContent; // Get the text of the clicked item
+        colorChange.style.backgroundColor = color// Set the background color
+        colorChange.textContent = color; // Set the text content
+    });
+}
+
+
+    </script>
+</body>
+</html>

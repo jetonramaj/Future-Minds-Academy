@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+    <style>
+        .wrapper{
+            display: flex;
+            gap: 30px;
+        }
+        .wrapper div {
+            flex: 1;
+            padding: 20px;
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        
+    </div>
+
+
+
+    <script>
+        const boxes = document.querySelector(".wrapper");
+         
+       
+       for(let i=0; i<boxes.children.length; i++){
+        boxes.children[i].addEventListener("click", function(){
+            console.log('You clicked at ', i+1);
+            
+        });
+       }
+     
+
+    </script>
+</body>
+</html>

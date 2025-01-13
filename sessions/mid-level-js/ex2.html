@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <style>
+        body {
+            display: flex;
+            gap: 50px;
+            font-family: sans-serif;
+        }
+        h1 {
+            padding: 10px 40px;
+            background-color: rgb(197, 197, 197);
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            font-size: 60px;
+        }
+        .allnumbers {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .allnumbers li {
+            background-color: bisque;
+            padding: 20px 50px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+            transition: 0.5s;
+        }
+
+        .allnumbers li:hover {
+            background-color: rgb(209, 193, 173);
+        }
+    </style>
+</head>
+<body>
+    <ul class="allnumbers">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <h1 id="numChange"></h1>
+
+    <script>
+const numChange = document.querySelector("#numChange");
+const allnumbers = document.querySelector(".allnumbers");
+
+for(let i=0; i<allnumbers.children.length; i++) {
+    allnumbers.children[i].addEventListener("click", function(){
+        numChange.innerHTML = i+1;
+    });
+
+} 
+
+    </script>
+</body>
+</html>

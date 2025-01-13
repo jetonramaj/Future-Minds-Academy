@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="text" id="email">
+        <input type="password" id="password">
+        <input type="number" id="age">
+        <button onclick="checkSubmit()">Sumbit</button>
+
+
+    <script>
+
+
+        function checkSubmit(){
+            let email = document.getElementById('email').value;
+
+            let password = document.getElementById('password').value;
+
+            let age = document.getElementById('age').value;
+
+            if(email == 'admin@gmail.com' && password == 'admin' ){
+                console.log('good job!')
+
+                if(age <= 17 ){
+                    console.log('your to young!')
+                } else if ( age > 65) {
+                    console.log('you are old enough')
+                }
+            }
+            else{
+                console.log('Gabim!')
+            }
+
+        }
+
+    </script>
+</body>
+</html>

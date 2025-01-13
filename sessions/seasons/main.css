@@ -1,0 +1,38 @@
+.wrapper {
+
+    width: 900px;
+
+    margin: 100px auto;
+
+    display: flex;
+
+    gap: 50px;
+
+}
+
+nav ul {
+
+    list-style-type: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+nav ul li {
+
+    padding: 20px;
+
+    background-color: antiquewhite;
+
+    cursor: pointer;
+
+}
+
+nav ul li:hover { background-color: rgb(193, 170, 140); }
+
+.logo { font-weight: bold; text-align: right; }
+

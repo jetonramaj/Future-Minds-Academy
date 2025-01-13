@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+        aside {
+            background-color: rgb(172, 156, 131);
+            padding: 20px;
+            height: 100vh;
+        }
+        aside > div{
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        aside > div:hover {
+            cursor:pointer;
+            background-color: rgb(88, 38, 38);
+            color: white;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+
+    </aside>
+    <main>
+        
+    </main>
+
+    <script>
+         const aside = document.querySelector('aside');
+         const main = document.querySelector('main');
+
+        
+        createRun(10, {row: 5, color:"green"});
+
+        function createRun(num, h){
+            for(let i=1; i<=num; i++){
+                if(i==h.row){
+                aside.innerHTML += `<div  onclick="loadRun(this)" style="color: ${h.color}">Run ${i}</div>`;
+                }
+                else{
+                    aside.innerHTML += `<div onclick="loadRun(this)" > Run ${i} </div>`;
+
+                }
+            }
+            
+        }
+
+        function loadRun(i){
+            main.innerHTML = `<h1>'+i.textContent+`</h1>`;
+        }
+    
+    </script>
+</body>
+</html>

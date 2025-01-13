@@ -7,7 +7,7 @@
 }
 
 body {
-    font-size: 10px; /* Scale value for different devices */
+    font-size: 10px;
     font-family: 'Roboto', sans-serif;
     background-color: var(--salmon);
     margin: 0;
@@ -38,15 +38,6 @@ body {
     transform: scale(1);
 }
 
-.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
-    content: 'Thank You! \\1F60A';
-}
-
-.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
-    pointer-events: none;
-    cursor: default;
-}
-
 .c-formContainer,
 .c-form,
 .c-form__toggle {
@@ -75,6 +66,7 @@ body {
     box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .c-form__toggle {
@@ -181,8 +173,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    max-width: 100%;
-    padding: 0 1rem;
 }
 
 header {
@@ -192,7 +182,6 @@ header {
 header h1 {
     font-weight: 600;
     font-size: 2rem;
-    word-wrap: break-word;
 }
 
 .tag-list {
@@ -268,67 +257,12 @@ header h1 {
 }
 
 @media (max-width: 768px) {
-    /* Adjust the form and button for smaller screens */
-    .c-formContainer,
-    .c-form,
-    .c-form__toggle {
-        width: 90%;
-        height: auto;
-    }
-
-    .c-form__input,
-    .c-form__buttonLabel {
-        font-size: 1.5rem;
-    }
-
-    .Random {
-        font-size: 1.2rem;
-        padding: 8px;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .tag {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-
-    .loop-slider .inner {
-        animation-duration: 15s; /* Slower animation for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further adjustments for mobile devices */
-    .c-formContainer,
-    .c-form,
-    .c-form__toggle {
+    .c-form {
         width: 100%;
-        height: auto;
+        padding: 1em;
     }
-
-    .c-form__input,
-    .c-form__buttonLabel {
-        font-size: 1.2rem;
-    }
-
     .Random {
-        font-size: 1rem;
-        padding: 6px;
-    }
-
-    header h1 {
-        font-size: 1.2rem;
-    }
-
-    .tag {
-        font-size: 0.7rem;
-        padding: 0.4rem;
-    }
-
-    .loop-slider .inner {
-        animation-duration: 20s; /* Slow down more on very small screens */
+        width: 100%;
+        padding: 1em;
     }
 }

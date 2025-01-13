@@ -45,20 +45,23 @@
         let selectedNames = [];
         let selectionCount = 0; 
 
-        // Lista e fjalëve të ndaluara
-        const forbiddenWords = ["kari", "lopa", "muti"]; // Zëvendëso me fjalët që nuk lejohen
+      
+    const forbiddenWords = ["kari", "koqja", "muti",  "llomi", "qefini", "nanqimi", "qiminanes", "pidhinanes", "nenqiri" , "bytha", "bythpalari", "robqimi", "rejonkoqja", "koqja"]; // Zëvendëso me fjalët që nuk lejohen
 
         function additem() {
             const name = emrat.value.trim();
             
             // Kontrollo nëse emri përmban fjalë të ndaluara
             if (containsForbiddenWords(name)) {
-                alert("Emri përmban fjalë të ndaluara! Ju lutemi, provoni një tjetër.");
+                alert("Emri përmban fjalë  jo të përshtatshme! Ju lutemi, provoni një tjetër.");
                 return;
             }
 
             allNames.push(name);
             randomTasks();
+
+            // Pastrimi i fushës së inputit
+            emrat.value = ''; // Ky rresht do ta pastrojë fushën e inputit pas shtimit të emrit
         }
 
         // Funksion për të kontrolluar nëse emri përmban fjalë të ndaluara
